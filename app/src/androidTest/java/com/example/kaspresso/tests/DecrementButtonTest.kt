@@ -3,6 +3,7 @@ package com.example.kaspresso.tests
 import androidx.test.ext.junit.rules.activityScenarioRule
 import com.example.kaspresso.MainActivity
 import com.example.kaspresso.screens.MainScreen
+import io.qameta.allure.kotlin.junit4.DisplayName
 import org.junit.Rule
 import org.junit.Test
 
@@ -12,6 +13,7 @@ class DecrementButtonTest : BaseTest() {
     val activityRule = activityScenarioRule<MainActivity>()
 
     @Test
+    @DisplayName("[UNIT] Decrease count")
     fun decrementButtonDecreaseCounter() = run {
         step("Decrease counter value to -4") {
             MainScreen {
