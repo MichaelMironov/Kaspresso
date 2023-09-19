@@ -3,12 +3,10 @@ package com.example.kaspresso.tests
 import androidx.test.ext.junit.rules.activityScenarioRule
 import com.example.kaspresso.MainActivity
 import com.example.kaspresso.screens.MainScreen
-import com.kaspersky.kaspresso.kaspresso.Kaspresso
-import com.kaspersky.kaspresso.testcases.api.testcase.TestCase
 import org.junit.Rule
 import org.junit.Test
 
-class DecrementButtonTest : TestCase(Kaspresso.Builder.simple()) {
+class DecrementButtonTest : BaseTest() {
 
     @get:Rule
     val activityRule = activityScenarioRule<MainActivity>()
