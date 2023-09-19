@@ -3,10 +3,10 @@ name: build
 on:
   pull_request:
     branches:
-      '*'
+      - '*'
   push:
     branches:
-      'master'
+      - 'master'
 
 jobs:
   test:
@@ -21,7 +21,8 @@ jobs:
       - uses: malinskiy/action-android/install-sdk@release/0.1.3
       - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.3
         with:
-          cmd: ./gradlew integrationTest
-          api: 34
+          cmd: ./gradlew connectedCheck
+          api: 29
           tag: default
           abi: x86
+      - run: printenv
