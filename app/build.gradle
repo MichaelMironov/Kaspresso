@@ -32,6 +32,18 @@ android {
     }
 }
 
+tasks.register('printDebug', Exec) {
+    workingDir(rootDir)
+}
+
+tasks.register('downloadAllureResults', Exec) {
+    workingDir(rootDir)
+    commandLine 'adb', 'pull', '/sdcard/googletest/test_outputfiles/allure-results', './allure-results'
+}
+
+
+connectedCheck.finalizedBy 'printDebug'
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
