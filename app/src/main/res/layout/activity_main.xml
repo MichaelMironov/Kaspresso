@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labeled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Hello World!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="cursive"
+        android:text="Count: 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/increment"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
+        android:text="Increment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#DEE8EF"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counter" />
+
+    <Button
+        android:id="@+id/decrement"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:text="Decrement"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#DEE8EF"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/increment"
+        app:layout_constraintTop_toBottomOf="@+id/increment" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="cursive"
+        android:text="Clear"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#DEE8EF"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="@+id/decrement"
+        app:layout_constraintTop_toBottomOf="@+id/decrement" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
